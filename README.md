@@ -1,15 +1,15 @@
-Engenhec-Engenharia
-Projeto solicitado para a matéria de engenharia de software
-Desenvolvimento
+## Engenhec-Engenharia
+### Projeto solicitado para a matéria de engenharia de software
+#### Desenvolvimento
 
-    Utilização de Java 17, Hibernate, Spring Framework e banco de dados SQL.
-    Criação de uma aplicação para login e cadastro de usuários, além de gerenciar a submissão de artigos científicos.
+    - Utilização de Java 17, Hibernate, Spring Framework e banco de dados SQL.
+    - Criação de uma aplicação para login e cadastro de usuários, além de gerenciar a submissão de artigos científicos.
 
 Recursos
 
-    :: Login e cadastro de usuários.
-    :: Submissão e revisão de artigos científicos.
-    :: Integração com o banco de dados SQL para armazenamento e recuperação de informações.
+    - Login e cadastro de usuários.
+    - Submissão e revisão de artigos científicos.
+    - Integração com o banco de dados SQL para armazenamento e recuperação de informações.
 
 Objetivo
 
