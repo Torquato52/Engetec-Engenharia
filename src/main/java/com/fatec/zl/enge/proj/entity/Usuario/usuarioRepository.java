@@ -1,4 +1,4 @@
-package com.fatec.zl.enge.proj.entity;
+package com.fatec.zl.enge.proj.entity.Usuario;
 
 
 import java.util.Optional;

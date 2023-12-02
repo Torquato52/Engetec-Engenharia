@@ -1,4 +1,4 @@
-package com.fatec.zl.enge.proj.entity;
+package com.fatec.zl.enge.proj.entity.Usuario;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
@@ -31,7 +31,7 @@ public class Usuario {
 
     }
     
-    public Usuario (CadastroUsuario dados){
+    public Usuario (DadosCadastroUsuario dados){
         this.nome = dados.nome();
         this.email = dados.email();
         this.senha = dados.senha();
