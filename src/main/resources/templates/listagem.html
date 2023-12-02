@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{template.html}">
+    <meta charset="UTF-8">
+<head>
+    <title>Lista de Organizadores </title>
+</head>
+
+<body>
+    <div layout:fragment="conteudo">
+        <h1> Lista de Organizadores</h1>
+        <a href="/listagem">Novo</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Fone</th>
+                    <th>Area</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="usuario : ${lista}">
+                    <td th:text="${usuario.nome}"></td>
+                    <td th:text="${usuario.email}"></td>
+                    <td th:text="${usuario.fone}"></td>
+                    <td th:text="${usuario.area}"></td>
+                    <td>
+                        <a th:href="@{/cadastro?id={id}(id=${usuario.id})}">Editar</a>
+
+                        <form action="/" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <input type="hidden" name="id" th:value="${usuario.id}">
+                            <input type="submit" value="Excluir">
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
