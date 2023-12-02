@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.fatec.zl.enge.proj.entity.Usuario;
-import com.fatec.zl.enge.proj.repository.usuarioRepository;
-import com.fatec.zl.enge.proj.entity.CadastroUsuario;
+import com.fatec.zl.enge.proj.entity.Usuario.DadosCadastroUsuario;
+import com.fatec.zl.enge.proj.entity.Usuario.Usuario;
+import com.fatec.zl.enge.proj.entity.Usuario.usuarioRepository;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -23,7 +23,7 @@ public class UsuarioController {
 	@Autowired
     private usuarioRepository usuarioRepository;
 	@Autowired
-	private VerificaLogin ver; 
+	private LoginController ver; 
 
 	@GetMapping
 	public ModelAndView loginTela() {
@@ -47,7 +47,7 @@ public class UsuarioController {
 
 	@PostMapping("/cadastrar")
 	@Transactional
-	public String cadastra(@Valid CadastroUsuario dados) {
+	public String cadastra(@Valid DadosCadastroUsuario dados) {
         usuarioRepository.save(new Usuario(dados));
 		return   "redirect:/"; 
 	}

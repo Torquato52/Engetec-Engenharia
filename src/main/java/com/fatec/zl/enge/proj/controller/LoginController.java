@@ -5,11 +5,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fatec.zl.enge.proj.entity.Usuario;
-import com.fatec.zl.enge.proj.repository.usuarioRepository;
+import com.fatec.zl.enge.proj.entity.Usuario.Usuario;
+import com.fatec.zl.enge.proj.entity.Usuario.usuarioRepository;
 
 @Service
-public class VerificaLogin {
+public class LoginController {
     @Autowired
     private usuarioRepository usuarioRepository;
 
