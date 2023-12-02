@@ -7,9 +7,9 @@ Desenvolvimento
 
 Recursos
 
-    Login e cadastro de usuários.
-    Submissão e revisão de artigos científicos.
-    Integração com o banco de dados SQL para armazenamento e recuperação de informações.
+    :: Login e cadastro de usuários.
+    :: Submissão e revisão de artigos científicos.
+    :: Integração com o banco de dados SQL para armazenamento e recuperação de informações.
 
 Objetivo
 
