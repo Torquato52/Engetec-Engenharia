@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.fatec.zl.enge.proj.entity.Usuario.DadosCadastroUsuario;
 import com.fatec.zl.enge.proj.entity.Usuario.Usuario;
-import com.fatec.zl.enge.proj.entity.Usuario.usuarioRepository;
+import com.fatec.zl.enge.proj.entity.Usuario.UsuarioRepository;
 
+import jakarta.servlet.http.HttpSession;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
@@ -21,9 +21,10 @@ import jakarta.validation.Valid;
 public class UsuarioController {
 	
 	@Autowired
-    private usuarioRepository usuarioRepository;
+    private UsuarioRepository usuarioRepository;
 	@Autowired
 	private LoginController ver; 
+	private HttpSession session;
 
 	@GetMapping
 	public ModelAndView loginTela() {
@@ -32,7 +33,7 @@ public class UsuarioController {
 
 	@PostMapping("/login")
     public String logins(@RequestParam String email, @RequestParam String senha) {
-        return ver.login(email, senha);
+        return ver.login(email, senha, session);
     }
 
 	@RequestMapping("/professor")
@@ -40,7 +41,7 @@ public class UsuarioController {
 		return new ModelAndView("professor.html");
 	}
 
-	@RequestMapping("/telacadastro")
+	@RequestMapping("/cadastro")
 	public ModelAndView cadastro() {
 		return new ModelAndView("cadastro.html");
 	}
@@ -49,14 +50,19 @@ public class UsuarioController {
 	@Transactional
 	public String cadastra(@Valid DadosCadastroUsuario dados) {
         usuarioRepository.save(new Usuario(dados));
-		return   "redirect:/"; 
+		return "redirect:/"; 
+	}
+
+	@RequestMapping("/orgcadastro")
+	public ModelAndView cadastroOrganiza() {
+		return new ModelAndView("cadastroOrganizador.html");
 	}
 
 	@DeleteMapping
 	@Transactional
 	public String removeOrganizador (Long id) {
 		usuarioRepository.deleteById (id);
-		return   "redirect:organizador";  
+		return "redirect:organizador";  
 	}
 
 	//	@RequestMapping("/listagem")

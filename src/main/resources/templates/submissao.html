@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Artigo</title>
+</head>
+<body>
+    <h1>Cadastro de Artigo</h1>
+    <form id="cadastroArtigo" method="post" 
+    th:action="@{/cadastro-artigo}" th:object="${artigo}">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required th:field="*{titulo}">
+        <br>
+        <label for="resumo">Resumo:</label>
+        <textarea id="resumo" name="resumo" required th:field="*{resumo}">
+        </textarea>
+        <br>
+        <label for="tag1">Tag 1:</label>
+        <input type="text" id="tag1" name="tag1" required th:field="*{tags[0]}">
+        <br>
+        <label for="tag2">Tag 2:</label>
+        <input type="text" id="tag2" name="tag2" required th:field="*{tags[1]}">
+        <br>
+        <label for="tag3">Tag 3:</label>
+        <input type="text" id="tag3" name="tag3" required th:field="*{tags[2]}">
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
