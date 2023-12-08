@@ -4,6 +4,7 @@
 ### Recursos
     - Login e cadastro de usuários.
     - Submissão e revisão de artigos científicos.
+    - Cadastro de eventos e palestras dentro da plataforma.
     - Integração com o banco de dados SQL para armazenamento e gerenciamento de informações.
     
 ### Objetivo
