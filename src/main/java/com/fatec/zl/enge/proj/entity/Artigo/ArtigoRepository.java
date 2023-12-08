@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface ArtigoRepository extends JpaRepository <Artigo, String> { 
+public interface ArtigoRepository extends JpaRepository <Artigo, Long> {
 
+    
 }

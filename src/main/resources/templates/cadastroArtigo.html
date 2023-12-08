@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Trabalho</title>
+    </head>
+    <body>
+        <h1>Cadastro de Trabalho</h1>
+        <form action="/cadastroArtigo" method="post">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+            <br>
+            <label for="resumo">Resumo:</label>
+            <textarea id="resumo" name="resumo" required></textarea>
+            <br>
+            <label for="tag1">Tag 1:</label>
+            <input type="text" id="tag1" name="tag1" required>
+            <br>
+            <label for="tag2">Tag 2:</label>
+            <input type="text" id="tag2" name="tag2" required>
+            <br>
+            <label for="tag3">Tag 3:</label>
+            <input type="text" id="tag3" name="tag3" required>
+            <input type="submit" value="Cadastrar">
+        </form>
+</body>
+</html>
