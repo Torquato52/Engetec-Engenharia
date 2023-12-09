@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.fatec.zl.enge.proj.entity.Area.Area;
 import com.fatec.zl.enge.proj.entity.Usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,9 +27,17 @@ public class Artigo {
     private String tag3;
     private LocalDate dataSubmissao;
 
+    public Artigo(){
+
+    }
+    
     @ManyToOne
     @JoinColumn()
     private Usuario fk_id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "area_id", referencedColumnName = "area_id")
+	private Area area;
 
     public Artigo (DadosCadastroArtigo dadosSub){
         this.titulo = dadosSub.titulo();

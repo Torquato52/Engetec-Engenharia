@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Artigos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="javascript:history.back()">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Listagem de Artigos</h1>
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Resumo</th>
+            <th>Tags</th>
+            <th>Data de Submissão</th>
+            <th>Autor</th>
+            <th>Ações</th>
+        </tr>
+        <tr th:each="artigo : ${artigos}">
+            <td th:text="${artigo.titulo}">Título</td>
+            <td th:text="${artigo.resumo}">Resumo</td>
+            <td>
+                <ul>
+                    <li th:text="${artigo.tag1}">Tag 1</li>
+                    <li th:text="${artigo.tag2}">Tag 2</li>
+                    <li th:text="${artigo.tag3}">Tag 3</li>
+                </ul>
+            </td>
+            <td th:text="${artigo.dataSubmissao}">Data de Submissão</td>
+            <td th:text="${artigo.autor}">Autor</td>
+            <td>
+                <form th:action="@{/editarArtigo/{id}(id=${artigo.id})}" method="get">
+                    <input type="submit" value="Editar">
+                </form>
+            </td>
+            <td>
+                <form th:action="@{/excluirArtigo/{id}(id=${artigo.id})}" method="get">
+                    <input type="submit" value="Excluir">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -18,7 +18,6 @@ public class Usuario {
     private String senha;
     private String instituicao;
     private String tipo;
-
     public Usuario(){
         
     }

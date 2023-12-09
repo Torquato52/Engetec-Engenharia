@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Áreas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="javascript:history.back()">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="area: ${areas}">
+                <td th:text="${area.id}">ID</td>
+                <td th:text="${area.descricao}">Descrição</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

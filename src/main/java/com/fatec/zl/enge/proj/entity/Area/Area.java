@@ -12,13 +12,13 @@ public class Area {
 	@Column(name="area_id")
 	private Long id;
 	private String descricao;
-	
-	public Area(Long id) {
-		this.id = id;
-	}
 
-    
-	public Area (CadastroArea dados) {
-		this.descricao = dados.descricao();	
+	public Area() {
+
+	}
+	
+	public Area(Long id, String descricao) {
+		this.id = id;
+		this.descricao = descricao;
 	}
 }

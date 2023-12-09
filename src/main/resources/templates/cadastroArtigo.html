@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+    layout:decorate="~{template.html}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cadastro de Trabalho</title>
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="javascript:history.back()">Voltar</a></li>
+                </ul>
+            </nav>
+        </header>
         <h1>Cadastro de Trabalho</h1>
-        <form action="/cadastroArtigo" method="post">
+        <form th:action="@{/cadastroArtigo}" th:object="${artigo}" method="post">
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" name="titulo" required>
             <br>
@@ -23,6 +31,12 @@
             <label for="tag3">Tag 3:</label>
             <input type="text" id="tag3" name="tag3" required>
             <input type="submit" value="Cadastrar">
+<!-- 
+            <label for="area">Area:</label>
+            <select id="area" name="area" required>
+            <option value="">Selecione uma área</option>
+            <option th:each="area : ${areaController.listaArea()}" th:value="${area.id}" th:text="${area.descricao}">Área</option>
+            </select> -->
         </form>
 </body>
 </html>

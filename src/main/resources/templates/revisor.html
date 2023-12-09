@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <title>Professor</title>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/estilo.css" th:href="@{/css/estilo.css}">
+
 </head>
 <body>
-    <h2>TRISTEIZA</h2>
+	<header>
+        <nav>
+            <ul>
+                <li><a th:href="@{/listarArtigos}">Listar-Artigo</a></li>
+                <li><a th:href="@{/logout}">logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div layout:fragment="conteudo"></div>
+
 </body>
 </html>

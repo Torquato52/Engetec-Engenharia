@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro da Area</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="javascript:history.back()">Voltar</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Cadastro da Area</h1>
+        <form action="/cadastrarArea" method="post">
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" required>
+            <input type="submit" value="Cadastrar">
+        </form>
+        <li><a th:href="@{/organizador}">Página Inicial</a></li>
+</body>
+</html>
