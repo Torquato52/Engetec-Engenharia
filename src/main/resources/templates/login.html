@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Login</title>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <h2>Login</h2>
-    <form th:action="@{/login}" method="post">
-        <input type="hidden" name="_method" value="post" />
-        <label for="email">E-mail:</label>
-        <input type="text" name="email" placeholder="Email" />
-        <label for="password">Senha:</label>
-        <input type="password" name="senha" placeholder="Senha" />
-        <button type="submit">Entrar</button>
-    </form>
-    <li><a th:href="@{/cadastro}">cadastre-se</a></li>
-</body>
+<body background="">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Login</title>
+        <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    </head>
+
+        <header id="login-container">
+            <img src="/css/Engetec.png">
+        </header>
+
+        <div id="texto-login">
+                <h1>Login</h1>
+        </div>
+
+        <div id="campos-login">
+            <form th:action="@{/login}" method="post">
+                <label for="email"><b>E-mail</b></label>
+                <input type="email" id="email" name="email" required>
+                <label for="password"><b>Senha</b></label>
+                <input type="password" placeholder="Senha" name="senha" required>
+        </div>
+        </br>
+        <div id="login-button">
+            <span><i class="bi bi-arrow-right-square-fill"></i></span>
+            <button type="submit">Entrar</button>
+        </div>
+            </form>
+        <nav id="senhaouconta">
+            <li><a th:href="@{/cadastro}">cadastre-se</a></li>
+        </nav>
+        <div id="footer">
+                <img src="_img/fatec.png" alt="cps">
+        </div>
+    </body>
 </html>

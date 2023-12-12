@@ -3,40 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/style-index.css" th:href="@{/css/style-index.css}">
+        <link rel="stylesheet" href="../static/css/style-cadastro.css" th:href="@{/css/style-cadastro.css}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <title>Cadastro de Usuário</title>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="javascript:history.back()">Voltar</a></li>
-                </ul>
-            </nav>
-        </header>
-        <h1>Cadastro de Usuário</h1>
+    <div class="header">
+        <img src="_img/Engetec.png" alt="Logo da EnGeTec" class="logo">
+        <ul class="menu">
+            <li><a href="https://fateczl.edu.br/engetec/">SOBRE O ENGETEC</a></li>
+            <li><a href="https://www.fateczl.edu.br/">CONTATO</a></li>
+        </ul>
+    </div>
+        <div id="cadastro">
+            <h1>Cadastro de Usuário</h1>
+        </div><span><br><br><br>
+    <nav id="formulario-cadastro">
         <form action="/cadastrar" method="post">
-            <label for="nome">Nome:</label>
+            <span><i class="bi bi-person-circle"></i></span>
+            <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" required>
-            <br>
-            <label for="email">Email:</label>
+            <br><br>
+            <span><i class="bi bi-envelope-at"></i></span>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
-            <br>
-            <label for="senha">Senha:</label>
+            <br><br>
+            <span><i class="bi bi-asterisk"></i></span>
+            <label for="senha">Senha</label>
             <input type="password" id="senha" name="senha" required>
-            <br>
+            <br><br><br>
+            <span><i class="bi bi-people-fill"></i></span>
             <label for="instituicao">Instituicao:</label>
             <input type="instituicao" id="instituicao" name="instituicao">
-            <br>
-            <label for="tipo">Tipo:</label>
-            
+            <br><br><br>
+            <label for="tipo">Tipo</label>
             <select id="tipo" name="tipo" required>
                 <option value="">Selecione...</option>
                 <option value="Organizador">Organizador</option>
                 <option value="Revisor">Revisor</option>
             </select>
-            
-            <br>
+            <br><br>
             <input type="submit" value="Cadastrar">
         </form>
+    </nav>
+        <br><br><br>
+        <div id="footer">
+            <img src="_img/fatec.png" alt="cps">
+        </div>
+
 </body>
 </html>

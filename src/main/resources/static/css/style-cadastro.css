@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap);
+*{
+    margin:1px;
+    padding:0px;
+    font-family: Outfit, sans-serif;}
+body {
+    font-family: Outfit, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: revert; /* Isso garante que o conteúdo fique centralizado verticalmente na tela */
+}
+
+#formulario-cadastro:input{
+    align-content: center;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    top: 1500px;
+    padding: 25px;
+}
+#footer img {
+    width: 120px; /* Ajuste o tamanho das imagens conforme necessário */
+    margin: 1px 1px; /* Espaçamento entre as imagens */
+}

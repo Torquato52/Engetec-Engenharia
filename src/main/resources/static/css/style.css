@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap);
+/*formatação da pagina geral da tela login*/
+body {
+    font-family: Outfit, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: revert; /* Isso garante que o conteúdo fique centralizado verticalmente na tela */
+    background-color: honeydew;
+}
+#login-container img {
+    width: 400px; /* Ajuste o tamanho da imagem conforme necessário */
+    margin-bottom: 5px;
+    background: transparent;
+    background-image: 100px;
+    text-align: center;
+}
+#texto-login {
+    text-align: center;
+    font-family: Outfit, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-shadow: white;
+    color: #00B6DD;
+}
+#campos-login{
+    text-align: center;
+    background: transparent;
+    font-family: Outfit, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #00B6DD;
+    border-radius: 10px;
+}
+#login-button {
+    margin: 10px;
+    width: flex;
+    margin-bottom: 0px;
+    border-color: #00B6DD;
+
+}
+#senhaouconta{
+    margin: 20px;
+    text-align: center;
+    font-family: Outfit, sans-serif;
+    color: #00B6DD;
+}
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 25px;
+}
+#footer img {
+    width: 120px; /* Ajuste o tamanho das imagens conforme necessário */
+    margin: 1px 1px; /* Espaçamento entre as imagens */
+}
